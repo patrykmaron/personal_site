@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:900&display=swap');
+
+// Set your brand colors
+$purple: #00c9ff;
+$pink: #FA7C91;
+$brown: #757763;
+$beige-light: #D0D1CD;
+$beige-lighter: #E4E4E4;
+
+// Update Bulma's global variables
+$family-sans-serif: "Nunito", sans-serif;
+$main-title-font: 'Montserrat', sans-serif;
+$grey-dark: $brown;
+$grey-light: $beige-light;
+$primary: $purple;
+$link: $pink;
+$widescreen-enabled: true;
+$fullhd-enabled: true;
+
+// Update some of Bulma's component variables
+$body-background-color: $beige-lighter;
+$control-border-width: 2px;
+$input-border-color: transparent;
+$input-shadow: none;
+
+
+
+
+
+// Import only what you need from Bulma
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+@import "../node_modules/bulma/sass/base/_all.sass";
+
+// Button
+@import "../node_modules/bulma/sass/elements/_all.sass";
+.button {
+    background: linear-gradient(to top right, #92fe9d -10%, #00c9ff 115%);
+    color: white;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+};
+.button:hover {
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);   
+};
+
+.button-wider {
+    width: 12rem;
+}
+
+@import "../node_modules/bulma/sass/form/_all.sass";
+@import "../node_modules/bulma/sass/components/_all.sass";
+@import "../node_modules/bulma/sass/layout/_all.sass";
+@import '../node_modules/bulma/sass/grid/_all.sass';
+
+.main-title {
+    color: #2d2d2d;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+    margin-bottom: 20px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-stroke: 0.45px rgba(0, 0, 0, 0.1);
+    text-shadow: #fff 0px 1px 1px;
+}
+
+// Hamburgers
+@import '../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss';
+
+.hamburger-custom{
+    display: flex;
+    margin-left: auto;
+    @include from($desktop){
+        display: none;
+    }
+
+} 
+
+.navbar-menu.is-active {
+    animation: navAnim .2s linear;
+}
+
+@keyframes navAnim {
+    0% {
+        display: none;
+        opacity: 0;
+        max-height: 0;
+    }
+    1% {
+        display: flex;
+        opacity: 0;
+        max-height: 0;
+    }
+
+    100% {
+        display: flex;
+        opacity: 1;
+        max-height: 500px;
+    }
+}
