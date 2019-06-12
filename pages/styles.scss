@@ -106,3 +106,38 @@ $input-shadow: none;
         max-height: 500px;
     }
 }
+
+// Background SVG
+
+.svg-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -100;
+}
+
+.blue-azure {
+    position: absolute;
+    top: -9rem;
+    right: -19rem;
+}
+
+.blue-azure-light {
+    position: absolute;
+    top: -9rem;
+    right: -19rem;
+}
+
+.big-blob {
+    position: absolute;
+    z-index: 100;
+    right:20rem;
+    top:8rem;
+}
+
+.big-blob-light {
+    position: absolute;
+    z-index: 100;
+    right:17.5em;
+    top: 7rem;
+}
