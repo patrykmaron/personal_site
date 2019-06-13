@@ -12,7 +12,7 @@ import BigBlobLight from '../static/big_blob_light.svg';
 
 function HeaderFront(){
     const [hamburger, setHam] = useState(false);
-
+    
 
     return(
         <header className="hero is-fullheight "  >

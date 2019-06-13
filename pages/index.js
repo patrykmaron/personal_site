@@ -6,7 +6,6 @@ import anime from 'animejs';
 // uninstall popmotion and animejs 
 
 
-
 class Home extends React.Component {
 
     componentDidMount(){
@@ -28,21 +27,32 @@ class Home extends React.Component {
             
                 <HeaderFront />
 
-                {/* <section className="section">
+              <section className="section">
                     <div className="container">
-                        <h1 className="title" style={{textAlign: "center", fontSize: "4rem", fontFamily: "'Montserrat', sans-serif"}}>
-                            Services
+                        <h1 className="title" style={{textAlign: "center", fontSize: "3.5rem", fontFamily: "'Montserrat', sans-serif"}}>
+                            Let's Work Together
                         </h1>
                         <h2 className="subtitle" style={{textAlign: "center", fontSize: "1.5rem", fontFamily: "'Montserrat', sans-serif"}}>
-                            Turning your ideas into reality
+                           
                         </h2>
+                        <div className="columns backgroundMe" style={{paddingLeft: "3rem", paddingRight: "3rem", paddingTop: "6rem",paddingBottom: "6rem"}}>
+                            <div className="column is-4">
+
+                            </div>
+                            <div className="column is-7" >
+                                <div className="content" >
+                                     <p style={{fontSize: "1.5rem", fontWeight: "bold", zIndex: 100,} }>I'm Patryk, an award-winning web developer thats been crafting awesome websites and apps from South London since 2012! I’m fiercely dedicated to designing the best websites I possibly can, for clients just like you. Websites that not only look beautiful but leave your competitors in the dust and help your business grow.</p>
+                                     <a className="button is-medium is-rounded button-wider-2">Find out more</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                </section> */}
+                </section> 
 
                 <section className="section">
                     <div className="container">
-                    <h1 className="title" style={{textAlign: "center", fontSize: "4rem", fontFamily: "'Montserrat', sans-serif"}}>
+                    <h1 className="title" style={{textAlign: "center", fontSize: "3.5rem", fontFamily: "'Montserrat', sans-serif"}}>
                             Services
                         </h1>
                         <h2 className="subtitle" style={{textAlign: "center", fontSize: "1.5rem", fontFamily: "'Montserrat', sans-serif"}}>
@@ -61,7 +71,7 @@ class Home extends React.Component {
                                             <p className="subtitle">Are you battling the Google bots? We can help you get your page indexed correctly!</p>
                                         </article>
                                     </div>
-                                    <div className="tile is-parent">
+                                    <div className="tile is-parent" >
                                         <article className="tile is-child notification gradient-red">
                                             <p className="title">Web Design</p>
                                             <p className="subtitle">Do you need just an landing page for your start up? Or a fancy blog to keep the world updated? Contact us!</p>
@@ -71,7 +81,7 @@ class Home extends React.Component {
                                         </article>
                                     </div>
                                 </div>
-                                <div className="tile is-parent">
+                                <div className="tile is-parent" >
                                     <article className="tile is-child notification gradient-cherry">
                                         <p className="title">Wide tile</p>
                                         <p className="subtitle">Aligned with the right tile</p>
@@ -94,6 +104,60 @@ class Home extends React.Component {
                         </div>
                     </div>
                 </section>
+          
+
+                <section className="hero is-primary is-bold">
+                    <div className="hero-body">
+                        <div className="container has-text-centered">
+                            <h1 className="title is-2">Let's Work Together!</h1>
+                            <h2 className="subtitle is-4">Contact me today for a free consultation</h2>
+                            <a className="button is-medium is-rounded button-wider-2">Contact Me</a>
+                        </div>
+                    </div>
+                    
+                </section>
+
+                <footer className="footer" >
+                    <div className="container">
+                        <div className="columns is-variable is-8">
+                                <div className="column">
+                                    <div className="content">
+                                        <h1>What I do</h1>
+                                        <p>
+                                        I'm a Freelance Web Designer based in London. I specialise in creating marketing websites for great individuals and small-medium sized businesses, helping them to market their product or services successfully on the web.
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <div className="column">
+                                   <div className="content">
+                                        <h1>Site Links</h1>
+                                        <ul>
+                                            <li>Home</li>
+                                            <li>Contact</li>
+                                            <li>FAQs</li>
+                                            <li>My Process</li>
+                                        </ul>
+                                   </div>
+                                </div>
+                                
+                                <div className="column">
+                                    <div className="content">
+                                            <h1>Contact</h1>
+                                            <p>hello@patrykmaron.com</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="is-divider" ></div>
+                            <div className="content has-text-centered">
+                                <p>
+                                by <a href="https://www.patrykmaron.com">Patryk Maron</a>, 2019. All rights reserved Trademarks and brands are the property of their respective owners.
+                                </p>
+                            </div>
+                    </div>
+                    
+                </footer>
             </Layout>
         )
     }

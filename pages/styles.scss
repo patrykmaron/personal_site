@@ -7,9 +7,9 @@
 // Set your brand colors
 $purple: #00c9ff;
 $pink: #FA7C91;
-$brown: #757763;
+$brown: #4e4e4e;
 $beige-light: #D0D1CD;
-$beige-lighter: #E4E4E4;
+$beige-lighter: rgb(240, 240, 240);
 
 // Update Bulma's global variables
 $family-sans-serif: "Nunito", sans-serif;
@@ -38,9 +38,8 @@ $input-shadow: none;
 // Button
 @import "../node_modules/bulma/sass/elements/_all.sass";
 .button {
-    width: 140px;
-    height: 45px;
-    font-size: 0.5rem;
+    padding: 1rem;
+    font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 2.5px;
     font-weight: 500;
@@ -61,9 +60,8 @@ $input-shadow: none;
     transform: translateY(-7px);
   }
 
-.button-wider {
-    width: 12rem;
-}
+
+
 
 @import "../node_modules/bulma/sass/form/_all.sass";
 @import "../node_modules/bulma/sass/components/_all.sass";
@@ -204,5 +202,32 @@ $input-shadow: none;
     
     color: white;
     border-radius: 1rem;
+}
+
+//footer
+.footer {
+    background: rgb(47, 47, 47);
+    color: rgb(167, 167, 167);
+    padding-bottom: 2rem;
+}
+
+.footer h1 {
+    color: rgb(195, 195, 195);
+}
+
+@import "../node_modules/bulma-divider/src/sass/index.sass";
+
+.backgroundMe::before {
+    content: "";
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%; height: 100%;
+    background-image: url("https://scontent-lhr3-1.cdninstagram.com/vp/8860dde9954f7c9a54f545bf2f0de676/5DC7124D/t51.2885-15/e35/33471696_1970610553180798_7123866068359053312_n.jpg?_nc_ht=scontent-lhr3-1.cdninstagram.com");
+    filter: opacity(0.2);
+    background-position: 18%;
+    z-index: -100;
 }
 
