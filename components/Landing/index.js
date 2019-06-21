@@ -8,7 +8,7 @@ import Link from 'next/link';
 export default () => {
 
     return(
-        <header className="hero is-fullheight">
+        <header className="hero is-fullheight" style={{overflow:"hidden"}}>
             <BackgroundSVG />
             <div className="container">
                 <div className="columns">
@@ -17,7 +17,7 @@ export default () => {
                             London's Most Exclusive Freelance Web Design
                         </h1>
                         <Link href="/contact">
-                            <a className="button is-medium is-rounded button-wider">Contact Me!</a>
+                            <a className="button is-large is-rounded is-primary ">Contact Me!</a>
                         </Link>
                     </div>
                     <div className="column">

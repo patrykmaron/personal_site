@@ -16,10 +16,10 @@ export default () => {
                 <div className="navbar-brand">
                     <a style={{height: 115, width: 75}}>
                         <Link href="/">
-                            <Logo />
+                            <Logo />                           
                         </Link>
                     </a>
-
+              
                     <span className="hamburger-custom" data-target="navMenu">
                         <button className={hamburger ? isActive : isNotActive} type="button" style={{outline:0}} onClick={()=> hamburger ? setHam(false) : setHam(true)}>
                             <span className="hamburger-box">
@@ -30,10 +30,10 @@ export default () => {
                 </div>
                 <div id="navMenu" className={hamburger ? 'navbar-menu is-active': 'navbar-menu'}>
                     <div className="navbar-end">
-                        <a href="#" className="navbar-item">Item1</a>
-                        <a href="#" className="navbar-item">Item2</a>
-                        <a href="#" className="navbar-item">Item3</a>
-                        <a href="#" className="navbar-item">Item4</a>
+                        <a href="#" className="nav-button">Home</a>
+                        <a href="#" className="nav-button">FAQs</a>
+                        <a href="#" className="nav-button">What I do</a>
+                        <a href="#" className="nav-button with-border">Hire Me</a>
                     </div>
                 </div>
             </div>

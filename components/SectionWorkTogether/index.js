@@ -36,7 +36,7 @@ export default () => (
                     <p>
                     {"I'm Patryk, an award-winning web developer thats been crafting awesome websites and apps from South London since 2012! I’m fiercely dedicated to designing the best websites I possibly can, for clients just like you. Websites that not only look beautiful but leave your competitors in the dust and help your business grow."}
                     </p>
-                    <a className="button is-medium is-rounded button-wider-2">{"Find out more"}</a>
+                    <a className="button is-large is-rounded is-primary">{"Find out more"}</a>
                 </div>
             </div>
         </div>
