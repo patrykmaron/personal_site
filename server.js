@@ -15,14 +15,30 @@ app.prepare().then(() => {
     server.use(compression())
 
     server.get('/contact', (req, res) => {
-        console.log("/contact accessed")
         return app.render(req, res, '/contact', req.query)
     })
 
-    server.get('/b', (req, res) => {
-        return app.render(req, res, '/b', req.query)
+    server.get('/app-development', (req, res) => {
+        return app.render(req, res, '/app-development', req.query)
     })
 
+    server.get('/ecommerce', (req, res) => {
+        return app.render(req, res, '/ecommerce', req.query)
+    })
+
+    server.get('/frequently-asked', (req, res) => {
+        return app.render(req, res, '/frequently-asked', req.query)
+    })
+
+    server.get('/seo', (req, res) => {
+        return app.render(req, res, '/seo', req.query)
+    })
+
+    server.get('/web-design', (req, res) => {
+        return app.render(req, res, '/web-design', req.query)
+    })
+
+  
     server.get('*', (req, res) => {
         return handle(req, res)
     })

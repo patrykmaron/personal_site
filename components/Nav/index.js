@@ -11,7 +11,7 @@ export default () => {
 
 
     return(
-        <nav className="navbar" role="navigation" aria-label="main navigation" style={{position: "absolute", width:"100%", background:"none"}}>
+        <nav className="navbar" role="navigation" aria-label="main navigation" style={{position: "", width:"100%", background:"none"}}>
             <div className="container">
                 <div className="navbar-brand">
                     <a style={{height: 115, width: 75}}>
@@ -30,10 +30,10 @@ export default () => {
                 </div>
                 <div id="navMenu" className={hamburger ? 'navbar-menu is-active': 'navbar-menu'}>
                     <div className="navbar-end">
-                        <a href="#" className="nav-button">Home</a>
-                        <a href="#" className="nav-button">FAQs</a>
-                        <a href="#" className="nav-button">What I do</a>
-                        <a href="#" className="nav-button with-border">Hire Me</a>
+                        <Link href="/"><a className="nav-button">Home</a></Link>
+                        <Link href="/frequently-asked"><a className="nav-button">FAQs</a></Link>                       
+                        <Link href="/process"><a className="nav-button">Process</a></Link>
+                        <Link href="/contact"><a className="nav-button with-border">Hire Me</a></Link>                        
                     </div>
                 </div>
             </div>

@@ -1,71 +1,103 @@
+import Link from 'next/link';
+
 export default () => (
     <section className="section">
-        <style jsx>
+    <style jsx>
             {`
                 h1 {
                     text-align: center;
                     font-size: 3.5rem;
                     font-family: 'Montserrat', sans-serif;
+                   
                 }
                 h2 {
                     text-align: center;
                     font-size: 1.5rem;
                     font-family: 'Montserrat', sans-serif;
                 }
+
+                .content {
+                    padding: 3rem;
+                }
+                p{
+                    font-size: 1.6rem;
+                    
+                }
+                .is-appdev {
+                    background: #f8faff;
+                    border-radius: 75px;
+                    padding: 2rem;
+                    margin-bottom: 2rem;
+                }
+
+                .is-appdev h1 {
+                    color: #3457b4;
+                }
+
+               
+
+              
+               
             `}
-        </style>
+    </style>
         <div className="container">
-            <h1 className="title">
-                {'Services'}
-            </h1>
-            <h2 className="subtitle">
-                {'Turning your ideas into reality'}
-            </h2>
-
-            <div className="tile is-ancestor">
-                <div className="tile is-vertical is-8">
-                    <div className="tile">
-                        <div className="tile is-parent is-vertical">
-                            <article className="tile is-child notification gradient-blue">
-                                <p className="title">Vertical...</p>
-                                <p className="subtitle">Top tile</p>
-                            </article>
-
-                            <article className="tile is-child notification gradient-green">
-                                <p className="title">SEO Optimazinations</p>
-                                <p className="subtitle">Are you battling the Google bots? We can help you get your page indexed correctly!</p>
-                            </article>
-                        </div>
-                        <div className="tile is-parent" >
-                            <article className="tile is-child notification gradient-red">
-                                <p className="title">Web Design</p>
-                                <p className="subtitle">Do you need just an landing page for your start up? Or a fancy blog to keep the world updated? Contact us!</p>
-                                <figure className="image is-4by3">
-                                               
-                                </figure>
-                            </article>
-                        </div>
-                    </div>
-                    <div className="tile is-parent" >
-                        <article className="tile is-child notification gradient-cherry">
-                            <p className="title">Wide tile</p>
-                            <p className="subtitle">Aligned with the right tile</p>
-                            <div className="content">
-                                    
-                            </div>
-                        </article>
+            <h1 className="title">Services</h1>
+            <h2 className="subtitle">Turning your ideas into reality</h2>
+            <div className="columns is-appdev">
+                <div className="column is-4">
+                    <img src="../../static/png/appdevelopment.png" />
+                </div>
+                <div className="column is-8">
+                    <div className="content">
+                        <h1 className="title is-2">App Development</h1>
+                        <p>Are you looking to elevate your business with an native iOS or Android app? Or you have a brilliant idea for an App but you don't know where to start? Look no more!</p>
+                        <Link href="/app-development"><a className="button is-rounded is-primary is-medium">Find out more</a></Link>                        
                     </div>
                 </div>
-                <div className="tile is-parent">
-                    <article className="tile is-child notification gradient-purple">
-                        <div className="content">
-                            <p className="title">Mobile App Development</p>
-                            <p className="subtitle">Do you need iOS or Android app for your business? Worry no more!</p>
-                            <div className="content">
-                            </div>
-                        </div>
-                    </article>
+
+            </div>
+
+            <div className="columns is-appdev">
+                <div className="column is-8">
+                    <div className="content">
+                        <h1 className="title is-2">E-Commerce</h1>
+                        <p>Take your boutique business into the online realm! I will help you set up the most effective online presence and bring your products for the mass audience!</p>
+                        <Link href="/ecommerce"><a className="button is-rounded is-primary is-medium">Find out more</a></Link>                        
+                    </div>
                 </div>
+                <div className="column is-4">
+                    <img src="../../static/png/ecommerce.png" />
+                </div>
+                
+            </div>
+
+            <div className="columns is-appdev">
+                <div className="column is-4">
+                    <img src="../../static/png/webcraft.png" />
+                </div>
+                <div className="column is-8">
+                    <div className="content">
+                        <h1 className="title is-2">Web Design</h1>
+                        <p>In need of a simple landing page? Or a wordpress blog? Or just wanting to establish some online presence but you're not sure yet how? Contact me today for a free consultation!</p>
+                        <Link href="/web-design"><a className="button is-rounded is-primary is-medium">Find out more</a></Link>                        
+                    </div>
+                </div>
+
+            </div>
+
+            <div className="columns is-appdev">
+                <div className="column is-8">
+                    <div className="content">
+                        <h1 className="title is-2">{'SEO & Content Optimazination'}</h1>
+                        <p>You're already established but your content isn't getting any visiblity? I will look into pushing your website in the search results and make it friendly for Google robots to crawl through it!</p>
+                        <Link href="/seo"><a className="button is-rounded is-primary is-medium">Find out more</a></Link>
+        
+                    </div>
+                </div>
+                <div className="column is-4">
+                    <img src="../../static/png/seocontent.png" />
+                </div>
+                
             </div>
         </div>
     </section>

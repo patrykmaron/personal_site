@@ -1,6 +1,7 @@
 import Layout from '../../components/Layout';
 import HeroPage from '../../components/HeroPage';
 import ContactForm from '../../components/ContactForm';
+import Link from 'next/link';
 
 export default () => {
     return(
@@ -21,6 +22,9 @@ export default () => {
                         font-size: 1.5rem;
                         font-weight: 500;
                         
+                    }
+                    a{
+                        color: #fc7318;
                     }
                 `}
             </style>
@@ -50,7 +54,7 @@ export default () => {
                             <aside>
                                 <div className="content">
                                     <h2>Do you have any questions?</h2>
-                                    <p>Check out the FAQs page to get some anwsers! If you still need more information contact me!</p>
+                                    <p>Check out the <Link href="/frequently-asked"><a>FAQs page</a></Link> to get some anwsers! If you still need more information contact me!</p>
                                 </div>
 
                                 <div className="content">

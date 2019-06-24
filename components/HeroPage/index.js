@@ -1,5 +1,5 @@
 export default (props) => (
-    <section className="hero is-medium">
+    <section className="hero ">
         <style jsx>
             {`
                 h1 {
@@ -12,7 +12,7 @@ export default (props) => (
                     font-size: 1.5rem;
                     font-family: 'Montserrat', sans-serif;
                 }
-            `}
+                     `}
         </style>
         <div className="hero-body">
             <div className="container">

@@ -1,16 +1,19 @@
 @charset "utf-8";
 
+
+
+
 // Import a Google Font
 //@import url('https://fonts.googleapis.com/css?family=Nunito:400,700');
 //@import url('https://fonts.googleapis.com/css?family=Montserrat:900&display=swap');
 
 
 // Set your brand colors
-$purple: #00c9ff;
+$purple: #fc7318;
 $pink: rgb(104, 255, 210);
 $brown: #4e4e4e;
 $beige-light: #D0D1CD;
-$beige-lighter: rgb(240, 240, 240);
+$beige-lighter: rgb(246, 246, 246);
 
 // Update Bulma's global variables
 //$family-sans-serif: "Nunito", sans-serif;
@@ -43,7 +46,7 @@ $input-shadow: none;
 @import '../node_modules/bulma/sass/grid/_all.sass';
 
 .main-title {
-    color: #2d2d2d;
+    color: #3457b4;
     font-family: 'Montserrat', sans-serif;
     font-size: 4.5rem;
     line-height: 4.5rem;
@@ -52,6 +55,12 @@ $input-shadow: none;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-stroke: 0.45px rgba(0, 0, 0, 0.1);
     text-shadow: #fff 0px 1px 1px;
+    @include until($tablet){
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+        text-align: center;
+        padding: 1.2rem;
+    }
 }
 
 // Hamburgers
@@ -67,15 +76,17 @@ $input-shadow: none;
 
 } 
 .hamburger-inner {
-    background-color:white;
+    background-color:#3457b4;
     &::before{
-        background-color: white;
+        background-color: #3457b4;
     }
     &::after{
-        background-color:white;
+        background-color:#3457b4;
     }
     
 }
+
+
 
 
 .navbar-menu.is-active {
@@ -83,7 +94,7 @@ $input-shadow: none;
 }
 
 .nav-button {
-    color: white;
+    color: #3457b4;
     margin: 20px;
     padding-top: 6px;
     padding-bottom: 6px;
@@ -96,10 +107,11 @@ $input-shadow: none;
     transition-duration: 0.4s;
     box-sizing: initial;
     &.with-border{
-       border: 2px solid white;
+       border: 2px solid #fc7318;
        padding-left: 17px;
        padding-right: 17px;
        border-radius: 25px;
+       color: #fc7318;
 
     } &.with-border:hover{
         border: 2px solid rgb(87, 87, 87);
@@ -149,7 +161,7 @@ $input-shadow: none;
     .hamburger.is-active .hamburger-inner,
     .hamburger.is-active .hamburger-inner::before,
     .hamburger.is-active .hamburger-inner::after {
-      background-color: #fff; }
+      background-color: #3457b4; }
 
 @keyframes navAnim {
     0% {
@@ -287,5 +299,44 @@ $input-shadow: none;
     filter: opacity(0.2);
     background-position: 18%;
     z-index: -100;
+}
+
+.img-webdesign {
+    //position: absolute;
+    //top: 2rem;    
+    width: 100%;
+    height: auto;
+}
+
+.mobile-friendly {
+    @include until($tablet){
+        text-align: center;
+    }
+}
+.patrykmobile {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    @include until($tablet){
+        padding: 2rem;
+        text-align: center;
+       
+    }
+}
+
+.patrykmobile p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    z-index: 100;
+    margin-bottom: 1.5rem;
+
+    @include until($tablet){
+        font-size: 1.2rem;
+        text-align: center;
+        font-weight: 500;
+        margin-bottom: 1.3rem;
+        
+    }
 }
 
