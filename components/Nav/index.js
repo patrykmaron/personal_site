@@ -14,7 +14,7 @@ export default () => {
         <nav className="navbar" role="navigation" aria-label="main navigation" style={{position: "", width:"100%", background:"none"}}>
             <div className="container">
                 <div className="navbar-brand">
-                    <a style={{height: 115, width: 75}}>
+                    <a style={{height: 115, width: 75, padding: 5}}>
                         <Link href="/">
                             <Logo />                           
                         </Link>
@@ -32,7 +32,9 @@ export default () => {
                     <div className="navbar-end">
                         <Link href="/"><a className="nav-button">Home</a></Link>
                         <Link href="/frequently-asked"><a className="nav-button">FAQs</a></Link>                       
-                        <Link href="/process"><a className="nav-button">Process</a></Link>
+                        <Link href="/app-development"><a className="nav-button">App Development</a></Link>
+                        <Link href="/ecommerce"><a className="nav-button">E Commerce</a></Link>
+                        <Link href="/web-design"><a className="nav-button">Web Design</a></Link>
                         <Link href="/contact"><a className="nav-button with-border">Hire Me</a></Link>                        
                     </div>
                 </div>

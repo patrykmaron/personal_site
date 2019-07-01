@@ -1,16 +1,25 @@
 import { useForm, useField } from 'react-final-form-hooks';
+import fetch from 'isomorphic-unfetch';
 
+export default (props) => {
 
-export default () => {
-
-    const sleep = ms => new Promise(resolve => setTimeout(resolve,ms))
-
+    
     const onSubmit = async values => {
-        await sleep(300)
-        alert(JSON.stringify(values, 0, 2))
-
-      
-        
+        return fetch('/api/contact', {
+            method: 'post',
+            headers: {
+                'Accept': 'application/json, text/plain, */*',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(values, 0, 2)
+        }).then(response => {
+           if (response.status == 200){
+               
+               props.HandleState();
+               return response
+           }
+         
+        })
     }
 
     const validate = values => {
@@ -24,14 +33,16 @@ export default () => {
         if(!values.messageContent){
             errors.messageContent = 'Required'
         }
-
-
         return errors
     }
 
     const { form, handleSubmit, values, pristine, submitting } = useForm({
         onSubmit, // the function to call with your form values upon valid submit
-        validate // a record-level validation function to check all form values
+        validate, // a record-level validation function to check all form values
+        initialValues: {
+            enquiryType: "Individual",
+            
+        }
     })
     const clientName = useField('clientName', form)
     const emailAddress = useField('emailAddress', form)
@@ -41,11 +52,10 @@ export default () => {
     const messageContent = useField('messageContent', form)
 
 
-
+    
     
     return(
         <form onSubmit={handleSubmit} >
-          
             <div className="field-body">
                 <div className="field">
                     <label className="label is-large">Name*</label>

@@ -3,7 +3,16 @@ import HeroPage from '../../components/HeroPage';
 import ContactForm from '../../components/ContactForm';
 import Link from 'next/link';
 
+
+
 export default () => {
+    const [ sent, setSent ] = React.useState(false);
+    
+    
+
+    const HandleForm = () => sent ? <ThankYou /> : <ContactForm HandleState={()=>setSent(true)} />;
+
+    const ThankYou = () => (<h1>Thank You! I will respond asap</h1>)
     return(
         <Layout>
             <style jsx>
@@ -47,7 +56,7 @@ export default () => {
                                     Let's get rolling! 🚀
                                 </p>
 
-                                <ContactForm />
+                                <HandleForm />
                             </div>
                         </div>
                         <div className="column">
@@ -59,7 +68,7 @@ export default () => {
 
                                 <div className="content">
                                     <h2>Unsure about what you need?</h2>
-                                    <p>No worries, I provide free consultation. Ping me an email at hello@patrykmaron.com and we can discuss your bespoke solution!</p>
+                                    <p>No worries, I provide free consultation. Ping me an email at info@patrykmaron.com and we can discuss your bespoke solution!</p>
                                 </div>
                             </aside>
                         </div>

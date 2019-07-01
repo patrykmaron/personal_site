@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default () => (
     <footer className="footer">
         <div className="container">
@@ -15,10 +17,14 @@ export default () => (
                     <div className="content">
                         <h1>Site Links</h1>
                         <ul>
-                            <li>Home</li>
-                            <li>Contact</li>
-                            <li>FAQs</li>
-                            <li>My Process</li>
+                            <Link href="/"><li><a>Home</a></li></Link>
+                            <Link href="/contact"><li><a>Contact</a></li></Link>
+                            <Link href="/frequently-asked"><li><a>FAQs</a></li></Link>
+                            <Link href="/app-development"><li><a>App Development</a></li></Link>
+                            <Link href="/ecommerce"><li><a>E Commerce</a></li></Link>
+                            <Link href="/web-design"><li><a>Web Design</a></li></Link>
+                            <Link href="/seo"><li><a>{'SEO & Content Optimazination'}</a></li></Link>
+                            
                         </ul>
                     </div>
                 </div>
@@ -26,7 +32,7 @@ export default () => (
                 <div className="column">
                     <div className="content">
                         <h1>Contact</h1>
-                        <p>hello@patrykmaron.com</p>
+                        <p>info@patrykmaron.com</p>
                     </div>
                 </div>
             </div>

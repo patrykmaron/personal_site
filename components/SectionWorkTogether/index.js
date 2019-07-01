@@ -1,4 +1,4 @@
-
+import Link from 'next/link';
 export default () => (
     <div className="section">
         <style jsx>
@@ -27,7 +27,7 @@ export default () => (
                     <p >
                     {"I'm Patryk, an award-winning web developer thats been crafting awesome websites and apps from South London since 2012! I’m fiercely dedicated to designing the best websites I possibly can, for clients just like you. Websites that not only look beautiful but leave your competitors in the dust and help your business grow."}
                     </p>
-                    <a className="button is-large is-rounded is-primary">{"Find out more"}</a>
+                    <Link href="/contact"><a className="button is-large is-rounded is-primary">{"Contact Me"}</a></Link>
                 </div>
             </div>
         </div>
