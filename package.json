@@ -21,7 +21,7 @@
     "next": "8.1.0",
     "next-purgecss": "^3.0.1",
     "node-sass": "^4.7.2",
-    "nodemailer": "^6.2.1",
+    "nodemailer": "^6.4.16",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "react": "16.8.6",
     "react-accessible-accordion": "^3.0.0",
